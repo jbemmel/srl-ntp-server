@@ -1,0 +1,32 @@
+module ntp-server {
+
+    yang-version "1";
+
+    namespace "urn:srl_nokia_demo/ntp-server";
+
+    prefix "ntp_server";
+
+    import srl_nokia-system {
+        prefix srl-system;
+    }
+    import srl_nokia-ntp {
+        prefix srl_nokia-ntp;
+    }
+
+    revision "2021-11-17" {
+        description "Initial revision";
+        reference "TBD";
+    }
+
+    grouping ntp-server-flag {
+        leaf ntp-server {
+          type srl_nokia-comm:admin-state;
+          default "enable";
+          description "Modify chronyd configuration to allow NTP clients to synchronize";
+        }
+    }
+
+    augment "/srl-system:system/srl_nokia-ntp:ntp" {
+       uses ntp-server-flag;
+    }
+}

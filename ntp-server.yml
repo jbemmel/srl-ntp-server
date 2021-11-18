@@ -1,0 +1,17 @@
+# See example_config.yml for an explanation of all the accepted fields
+ntp_server:
+   path: /opt/ntp-server
+   # Modifying config file requires root privileges
+   launch-command: sudo /opt/ntp-server/enable-ntp-server.sh
+   search-command: sudo /opt/ntp-server/enable-ntp-server.sh
+   wait-for-config: Yes
+   failure-threshold: 3
+   failure-action: wait=forever
+   author: 'Nokia'
+   version-command: echo "1.0"
+   yang-modules:
+     names:
+     - "ntp-server"
+     source-directories:
+     - "/opt/ntp-server/"
+     - "/opt/srlinux/models/srl_nokia/models/system/"
