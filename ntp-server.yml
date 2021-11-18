@@ -2,11 +2,12 @@
 ntp_server:
    path: /opt/ntp-server
    # Modifying config file requires root privileges
+   # run-as-user: root
    launch-command: sudo /opt/ntp-server/enable-ntp-server.sh
-   search-command: sudo /opt/ntp-server/enable-ntp-server.sh
+   search-command: ./sr_app_mgr
    wait-for-config: Yes
-   failure-threshold: 3
-   failure-action: wait=forever
+   # failure-threshold: 3
+   # failure-action: wait=5
    author: 'Nokia'
    version-command: echo "1.0"
    yang-modules:
