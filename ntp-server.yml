@@ -15,3 +15,8 @@ ntp_server:
      source-directories:
      - "/opt/ntp-server/"
      - "/opt/srlinux/models/srl_nokia/models/system/"
+     - "/opt/srlinux/models/srl_nokia/models/common/"
+     - "/opt/srlinux/models/srl_nokia/models/network-instance/"
+     - "/opt/srlinux/models/srl_nokia/models/interfaces/"
+     # - "/opt/srlinux/models/srl_nokia/models/qos/"
+     # - "/opt/srlinux/models/srl_nokia/models/routing-policy/"

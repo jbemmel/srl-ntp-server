@@ -12,6 +12,9 @@ module ntp-server {
     import srl_nokia-ntp {
         prefix srl_nokia-ntp;
     }
+    import srl_nokia-common {
+        prefix srl_nokia-comm;
+    }
 
     revision "2021-11-17" {
         description "Initial revision";
